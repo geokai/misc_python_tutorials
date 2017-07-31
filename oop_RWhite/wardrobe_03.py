@@ -76,7 +76,7 @@ def main():
     my_clothes.append(Shirt("dress shirt", True, 0, 1, False))
 
     print("\n==== Full Wardrobe ==========")
-    for i, item in enumerate(my_clothes):
+    for i, _ in enumerate(my_clothes):
         print(my_clothes[i])
 """
     print("\n==== Clean clothes ==========")
