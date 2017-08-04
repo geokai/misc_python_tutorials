@@ -31,6 +31,13 @@ class CircusDogs(object):
 
     def num_of_tricks(self):
         """return the number of tricks"""
-        for num, _ in enumerate(self.tricks, 1):
+        for index, _ in enumerate(self.tricks, 1):
             pass
-        return num
+        return index
+
+
+SAL_DOG = CircusDogs('Sally', 'Poodle')
+KIP_DOG = CircusDogs('Kipper', 'Beagle')
+
+print(SAL_DOG.get_name())
+print(KIP_DOG.get_name())
