@@ -8,7 +8,7 @@ class CircusDogs(object):
     """Create circus dog class objects"""
 
     def __init__(self, name, breed):
-        """create instance with name, breed and trick-list"""
+        """create instance with name, breed and empty trick-list"""
         self.name = name
         self.breed = breed
         self.tricks = []
@@ -29,7 +29,7 @@ class CircusDogs(object):
         """return list of tricks"""
         return self.tricks
 
-    def num_tricks(self):
+    def num_of_tricks(self):
         """return the number of tricks"""
         for num, _ in enumerate(self.tricks, 1):
             pass
