@@ -12,6 +12,7 @@ class CircusDogs(object):
         self.name = name
         self.breed = breed
         self.tricks = []
+        self.trick_counter = 0
 
     def get_name(self):
         """return name"""
@@ -22,27 +23,28 @@ class CircusDogs(object):
         return self.breed
 
     def add_trick(self, trick):
-        """add/append trick to tricks list"""
+        """add/append trick to tricks list & increment trick counter"""
         self.tricks.append(trick)
+        self.trick_counter += 1
 
     def get_tricks(self):
         """return list of tricks"""
         return self.tricks
 
-    def num_of_tricks(self):
-        """return the number of tricks"""
-        for index, _ in enumerate(self.tricks, 1):
-            return index
+    def get_trick_count(self):
+        """returns number of tricks"""
+        return self.trick_counter
 
     def __str__(self):
-        return "Circus Dog[name: " + self.name + \
+        return "Circus Dog[Name: " + self.name + \
                 ", Breed: " + self.breed + \
                 ", Tricks: " + str(self.tricks) + \
+                ", Trick-count: " + str(self.trick_counter) + \
                 "]"
 
 
 SAL_DOG = CircusDogs('Sally', 'Poodle')
 KIP_DOG = CircusDogs('Kipper', 'Beagle')
 
-print(SAL_DOG.get_name())
-print(KIP_DOG.get_name())
+print(SAL_DOG.__str__())
+print(KIP_DOG.__str__())
