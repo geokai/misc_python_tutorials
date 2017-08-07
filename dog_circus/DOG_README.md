@@ -1,7 +1,12 @@
-### Circus Dogs
+## Circus Dogs
 
-This directory contains my first class script and is based on [Richard White](https://www.youtube.com/user/rwhite5279/featured)
-**Intro To Object-Oriented Programming In Python (parts 1 & 2)**
+This directory contains my first class script after completing oop tutorials by
+[Richard White](https://www.youtube.com/user/rwhite5279/featured):
+
+[**Intro To Object-Oriented Programming In Python (parts 1 & 2)**](https://www.youtube.com/watch?v=wYYzteRKU7U)
+
+
+### CircusDogs Class
 
 The class is based on a ficticious circus dog troupe.
 A dog object can be instanciated with passing a 'name' and a 'breed',
@@ -14,9 +19,9 @@ An 'add\_trick' method appends a trick (string) to the tricks list.
 
 ### Tricks Counter
 
-there are three implementations of the tricks counter (branches):
+There are three implementations of the tricks counter (branches):
 
-- a counter not contained within the instance, that is updated via an
+- a counter not contained within the instance, that is incremented via an
 independent enumerate function of the trick list within the 'num\_of\_tricks'
 method.  The counter quantity in is not stored but calculated at each call.
 
