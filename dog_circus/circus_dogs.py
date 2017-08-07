@@ -32,8 +32,13 @@ class CircusDogs(object):
     def num_of_tricks(self):
         """return the number of tricks"""
         for index, _ in enumerate(self.tricks, 1):
-            pass
-        return index
+            return index
+
+    def __str__(self):
+        return "Circus Dog[name: " + self.name + \
+                ", Breed: " + self.breed + \
+                ", Tricks: " + str(self.tricks) + \
+                "]"
 
 
 SAL_DOG = CircusDogs('Sally', 'Poodle')
