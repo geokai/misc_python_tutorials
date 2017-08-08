@@ -66,27 +66,55 @@ class Shirt(Clothing):
                 "]"
 
 
+
 def main():
     """The main function will test the Clothing class"""
     my_clothes = []
-    my_clothes.append(Clothing("blue jeans", False))
+    my_clothes.append(Clothing("blue jeans", True))
     my_clothes.append(Clothing("baseball cap", True, 20, 1000))
     my_clothes.append(Clothing("jacket", True, 20, 100))
     my_clothes.append(Shirt("t-shirt", True, 0, 1, True))
     my_clothes.append(Shirt("dress shirt", True, 0, 1, False))
 
+    def wear_item(item):
+        """call wear method on named item variable"""
+        for i, _ in enumerate(my_clothes):
+            if my_clothes[i].get_name() == item:
+                my_clothes[i].wear()
+
+    wear_item('t-shirt')
+    wear_item('blue jeans')
+
     print("\n==== Full Wardrobe ==========")
     for i, _ in enumerate(my_clothes):
         print(my_clothes[i])
-"""
-    print("\n==== Clean clothes ==========")
 
+    print("\n==== Clean clothes ==========")
+    for i, _ in enumerate(my_clothes):
+        if my_clothes[i].is_clean():
+            print(my_clothes[i])
 
     print("\n==== Dirty clothes ==========")
+    for i, _ in enumerate(my_clothes):
+        if not my_clothes[i].is_clean():
+            print(my_clothes[i])
 
+    print("\n==== All Shirts =============")
+    for i, _ in enumerate(my_clothes):
+        if isinstance(my_clothes[i], Shirt):
+            print(my_clothes[i])
 
-    print("\n==== Shirts =================")
-"""
+    print("\n==== Clean Shirts ===========")
+    for i, _ in enumerate(my_clothes):
+        if isinstance(my_clothes[i], Shirt):
+            if my_clothes[i].is_clean():
+                print(my_clothes[i])
+
+    print("\n==== Dirty Shirts ===========")
+    for i, _ in enumerate(my_clothes):
+        if isinstance(my_clothes[i], Shirt):
+            if not my_clothes[i].is_clean():
+                print(my_clothes[i])
 
 
 if __name__ == "__main__":
