@@ -43,9 +43,17 @@ class CircusDogs(object):
                 ", Trick-count: " + str(self.trick_counter) + \
                 "]"
 
-
 SAL_DOG = CircusDogs('Sally', 'Poodle')
 KIP_DOG = CircusDogs('Kipper', 'Beagle')
+FR_DOG = CircusDogs('Frank', 'Pug')
 
-print(SAL_DOG.get_name())
-print(KIP_DOG.get_name())
+CIRCUS_DOGS = []
+CIRCUS_DOGS.append(SAL_DOG)
+CIRCUS_DOGS.append(KIP_DOG)
+CIRCUS_DOGS.append(FR_DOG)
+
+print()
+print(SAL_DOG.__str__())
+print(KIP_DOG.__str__())
+print(FR_DOG.__str__())
+print()
