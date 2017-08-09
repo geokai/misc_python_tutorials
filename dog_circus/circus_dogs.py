@@ -32,8 +32,7 @@ class CircusDogs(object):
     def add_trick(self, trick):
         """add/append trick to tricks list & increment trick counter"""
         self.tricks.append(trick)
-        for index, _ in enumerate(self.tricks, 1):
-            self.trick_counter = index
+        self.num_of_tricks()
 
     def get_tricks(self):
         """return list of tricks"""
@@ -41,6 +40,8 @@ class CircusDogs(object):
 
     def num_of_tricks(self):
         """return the number of tricks"""
+        for index, _ in enumerate(self.tricks, 1):
+            self.trick_counter = index
         return self.trick_counter
 
     def __str__(self):
