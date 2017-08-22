@@ -34,7 +34,7 @@ class Celsius():
     @property
     def default_scale(self):
         """returns default scale"""
-        # print('Default scale is:')
+        self._scale = 'Celsius'
         return 'Default scale is: ' + self._scale
 
 
